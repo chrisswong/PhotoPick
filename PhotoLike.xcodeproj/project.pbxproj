@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		839F16F41A1E4E7A000879CA /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839F16F31A1E4E7A000879CA /* PhotoListViewController.m */; };
+		839F16F71A1E4EE8000879CA /* PhotoListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 839F16F61A1E4EE8000879CA /* PhotoListManager.m */; };
 		83AE55021A1E4352008AA04E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AE55011A1E4352008AA04E /* main.m */; };
 		83AE55051A1E4352008AA04E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AE55041A1E4352008AA04E /* AppDelegate.m */; };
 		83AE55081A1E4352008AA04E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AE55071A1E4352008AA04E /* ViewController.m */; };
@@ -28,6 +30,10 @@
 
 /* Begin PBXFileReference section */
 		839F16F11A1E48AC000879CA /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		839F16F21A1E4E7A000879CA /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoListViewController.h; sourceTree = "<group>"; };
+		839F16F31A1E4E7A000879CA /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListViewController.m; sourceTree = "<group>"; };
+		839F16F51A1E4EE8000879CA /* PhotoListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoListManager.h; sourceTree = "<group>"; };
+		839F16F61A1E4EE8000879CA /* PhotoListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListManager.m; sourceTree = "<group>"; };
 		83AE54FC1A1E4352008AA04E /* PhotoLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AE55001A1E4352008AA04E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83AE55011A1E4352008AA04E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +97,10 @@
 				83AE550E1A1E4352008AA04E /* LaunchScreen.xib */,
 				83AE54FF1A1E4352008AA04E /* Supporting Files */,
 				839F16F11A1E48AC000879CA /* Common.h */,
+				839F16F21A1E4E7A000879CA /* PhotoListViewController.h */,
+				839F16F31A1E4E7A000879CA /* PhotoListViewController.m */,
+				839F16F51A1E4EE8000879CA /* PhotoListManager.h */,
+				839F16F61A1E4EE8000879CA /* PhotoListManager.m */,
 			);
 			path = PhotoLike;
 			sourceTree = "<group>";
@@ -222,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83AE55081A1E4352008AA04E /* ViewController.m in Sources */,
+				839F16F41A1E4E7A000879CA /* PhotoListViewController.m in Sources */,
+				839F16F71A1E4EE8000879CA /* PhotoListManager.m in Sources */,
 				83AE55051A1E4352008AA04E /* AppDelegate.m in Sources */,
 				83AE55021A1E4352008AA04E /* main.m in Sources */,
 			);

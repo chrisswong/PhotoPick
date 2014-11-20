@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoListManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) PhotoListManager *photoListManager;
 
 
 @end

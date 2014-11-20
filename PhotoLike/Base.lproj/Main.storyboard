@@ -3,6 +3,7 @@
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,18 +19,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCN-Ru-6gF">
-                                <rect key="frame" x="95" y="121" width="131" height="30"/>
-                                <state key="normal" title="Give Photo Access">
+                                <rect key="frame" x="119" y="121" width="83" height="30"/>
+                                <state key="normal" title="Pick Photos">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="givePhotoAcessButtonDidTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="30A-9Y-yKB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irW-Th-bNr">
+                                <rect key="frame" x="83" y="159" width="156" height="30"/>
+                                <state key="normal" title="Show Selected Photos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SM7-Re-6Xx" kind="modal" id="dDU-Sf-a4e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="WCN-Ru-6gF" secondAttribute="centerX" id="3nT-wX-yYk"/>
+                            <constraint firstItem="irW-Th-bNr" firstAttribute="centerX" secondItem="WCN-Ru-6gF" secondAttribute="centerX" id="OKm-fH-saM"/>
+                            <constraint firstItem="irW-Th-bNr" firstAttribute="top" secondItem="WCN-Ru-6gF" secondAttribute="bottom" constant="8" id="ZUX-Td-ejm"/>
                             <constraint firstItem="WCN-Ru-6gF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="101" id="uAH-De-IXh"/>
                         </constraints>
                     </view>
@@ -37,6 +49,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1" y="301"/>
+        </scene>
+        <!--Photo List View Controller-->
+        <scene sceneID="E5F-GE-plC">
+            <objects>
+                <viewController id="SM7-Re-6Xx" customClass="PhotoListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fdz-PV-Wep"/>
+                        <viewControllerLayoutGuide type="bottom" id="nxH-hY-IE4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S9k-3z-8le">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Images" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-mh-NWQ">
+                                <rect key="frame" x="96" y="20" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JtN-LC-eaj">
+                                <rect key="frame" x="16" y="59" width="288" height="509"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SM7-Re-6Xx" id="BvZ-IO-q29"/>
+                                    <outlet property="delegate" destination="SM7-Re-6Xx" id="sJY-df-uhc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Dhn-mh-NWQ" secondAttribute="centerX" id="76a-5t-YFm"/>
+                            <constraint firstItem="JtN-LC-eaj" firstAttribute="leading" secondItem="S9k-3z-8le" secondAttribute="leadingMargin" id="866-hY-mV6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JtN-LC-eaj" secondAttribute="trailing" id="j3e-pK-7aX"/>
+                            <constraint firstItem="Dhn-mh-NWQ" firstAttribute="top" secondItem="Fdz-PV-Wep" secondAttribute="bottom" id="k0h-4K-oOq"/>
+                            <constraint firstItem="nxH-hY-IE4" firstAttribute="top" secondItem="JtN-LC-eaj" secondAttribute="bottom" id="l6B-rq-6h1"/>
+                            <constraint firstItem="JtN-LC-eaj" firstAttribute="top" secondItem="Dhn-mh-NWQ" secondAttribute="bottom" constant="18" id="xhW-8a-nFf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnm-an-vxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="298"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
