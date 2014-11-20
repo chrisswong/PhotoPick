@@ -16,6 +16,8 @@ static NSString *cellIdentifier = @"cellIdentifier";
     AppDelegate *appDelegate;
 }
 
+@property (nonatomic, strong) NSArray *photoList;
+
 @end
 
 @implementation PhotoListViewController
@@ -24,6 +26,8 @@ static NSString *cellIdentifier = @"cellIdentifier";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     appDelegate = APP_DELEGATE;
+    self.photoList = [appDelegate.photoListManager photoList];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +39,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[appDelegate.photoListManager photoList] count];
+    return [self.photoList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,6 +48,10 @@ static NSString *cellIdentifier = @"cellIdentifier";
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
+    
+    NSString *fileName = [[self.photoList objectAtIndex:indexPath.row] lastPathComponent];
+    cell.textLabel.text = fileName;
+    
     return cell;
 }
 

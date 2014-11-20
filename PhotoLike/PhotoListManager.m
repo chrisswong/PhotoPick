@@ -7,11 +7,12 @@
 //
 
 #import "PhotoListManager.h"
+#import "Common.h"
 
 @implementation PhotoListManager
 
 - (NSArray *) photoList {
     
-    return @[];
+    return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:CACHE_DIRECTORY error:NULL];;
 }
 @end
