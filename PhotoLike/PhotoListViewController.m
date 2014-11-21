@@ -49,10 +49,27 @@ static NSString *cellIdentifier = @"cellIdentifier";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
+    
+    NSString *fullFilePath = [self.photoList objectAtIndex:indexPath.row];
     NSString *fileName = [[self.photoList objectAtIndex:indexPath.row] lastPathComponent];
+    
+    UIImage *image = [UIImage imageWithContentsOfFile:fullFilePath];
+    
     cell.textLabel.text = fileName;
+    cell.imageView.image = image;
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self showImageWithIndexPathRow:indexPath.row];
+}
+
+- (void) showImageWithIndexPathRow:(NSInteger) row {
+    //
 }
 
 #pragma mark - UITableViewDelegate

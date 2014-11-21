@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ViewController () 
+@interface ViewController ()
+
+{
+    AppDelegate *appDelegate;
+}
 
 @end
 
@@ -16,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.    
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,15 +44,7 @@
     
     NSData *imageData = UIImagePNGRepresentation(selectedImage);
     
-    NSInteger randomFileNo = arc4random_uniform(100);
-    
-    NSString *fileName = [NSString stringWithFormat:@"%d.png", randomFileNo];
-    
-    NSString *filePath = [CACHE_DIRECTORY stringByAppendingPathComponent:fileName];
-    
-    [imageData writeToFile:filePath atomically:YES];
-    
-    NSLog(@"image saved at %@" , filePath);
+    [APP_DELEGATE.photoListManager saveImageData:imageData];
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"Image Saved" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];

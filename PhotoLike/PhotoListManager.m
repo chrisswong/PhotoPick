@@ -13,6 +13,31 @@
 
 - (NSArray *) photoList {
     
-    return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:CACHE_DIRECTORY error:NULL];;
+    NSArray *list = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:CACHE_DIRECTORY error:NULL];
+    
+    NSMutableArray *fullPathList = [[NSMutableArray alloc] init];
+    
+    for (NSString *fileName in list) {
+        if (![fileName hasPrefix:@"."]) {
+            
+            [fullPathList addObject:[CACHE_DIRECTORY stringByAppendingPathComponent:fileName]];
+        }
+    }
+    
+    return [NSArray arrayWithArray:fullPathList];
+}
+
+- (void) saveImageData:(NSData *) imageData {
+    
+    NSInteger randomFileNo = arc4random_uniform(100);
+    
+    NSString *fileName = [NSString stringWithFormat:@"%d.png", randomFileNo];
+    
+    NSString *filePath = [CACHE_DIRECTORY stringByAppendingPathComponent:fileName];
+    
+    [imageData writeToFile:filePath atomically:YES];
+    
+    NSLog(@"image saved at %@" , filePath);
+    
 }
 @end

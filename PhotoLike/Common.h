@@ -13,6 +13,6 @@
 
 #define CACHE_DIRECTORY [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
 
-#define APP_DELEGATE (AppDelegate *) [[UIApplication sharedApplication] delegate];
+#define APP_DELEGATE ((AppDelegate *) [[UIApplication sharedApplication] delegate])
 
 #endif

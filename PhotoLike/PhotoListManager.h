@@ -12,4 +12,6 @@
 
 - (NSArray *) photoList;
 
+- (void) saveImageData:(NSData *) imageData;
+
 @end
