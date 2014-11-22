@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		839F16F41A1E4E7A000879CA /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839F16F31A1E4E7A000879CA /* PhotoListViewController.m */; };
 		839F16F71A1E4EE8000879CA /* PhotoListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 839F16F61A1E4EE8000879CA /* PhotoListManager.m */; };
+		839F16FF1A1EC658000879CA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839F16FE1A1EC658000879CA /* NotificationCenter.framework */; };
+		839F17051A1EC658000879CA /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839F17041A1EC658000879CA /* TodayViewController.m */; };
+		839F17071A1EC658000879CA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839F17061A1EC658000879CA /* MainInterface.storyboard */; };
+		839F170A1A1EC658000879CA /* PhotoToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 839F16FC1A1EC658000879CA /* PhotoToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		83AE55021A1E4352008AA04E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AE55011A1E4352008AA04E /* main.m */; };
 		83AE55051A1E4352008AA04E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AE55041A1E4352008AA04E /* AppDelegate.m */; };
 		83AE55081A1E4352008AA04E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AE55071A1E4352008AA04E /* ViewController.m */; };
@@ -19,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		839F17081A1EC658000879CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83AE54F41A1E4352008AA04E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 839F16FB1A1EC658000879CA;
+			remoteInfo = PhotoToday;
+		};
 		83AE55161A1E4352008AA04E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83AE54F41A1E4352008AA04E /* Project object */;
@@ -28,12 +39,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		839F170E1A1EC658000879CA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				839F170A1A1EC658000879CA /* PhotoToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		839F16F11A1E48AC000879CA /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		839F16F21A1E4E7A000879CA /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoListViewController.h; sourceTree = "<group>"; };
 		839F16F31A1E4E7A000879CA /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListViewController.m; sourceTree = "<group>"; };
 		839F16F51A1E4EE8000879CA /* PhotoListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoListManager.h; sourceTree = "<group>"; };
 		839F16F61A1E4EE8000879CA /* PhotoListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListManager.m; sourceTree = "<group>"; };
+		839F16FC1A1EC658000879CA /* PhotoToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PhotoToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		839F16FE1A1EC658000879CA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		839F17021A1EC658000879CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		839F17031A1EC658000879CA /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		839F17041A1EC658000879CA /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		839F17061A1EC658000879CA /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		83AE54FC1A1E4352008AA04E /* PhotoLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AE55001A1E4352008AA04E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83AE55011A1E4352008AA04E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,6 +81,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		839F16F91A1EC658000879CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839F16FF1A1EC658000879CA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83AE54F91A1E4352008AA04E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,11 +106,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		839F16FD1A1EC658000879CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				839F16FE1A1EC658000879CA /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		839F17001A1EC658000879CA /* PhotoToday */ = {
+			isa = PBXGroup;
+			children = (
+				839F17031A1EC658000879CA /* TodayViewController.h */,
+				839F17041A1EC658000879CA /* TodayViewController.m */,
+				839F17061A1EC658000879CA /* MainInterface.storyboard */,
+				839F17011A1EC658000879CA /* Supporting Files */,
+			);
+			path = PhotoToday;
+			sourceTree = "<group>";
+		};
+		839F17011A1EC658000879CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				839F17021A1EC658000879CA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		83AE54F31A1E4352008AA04E = {
 			isa = PBXGroup;
 			children = (
 				83AE54FE1A1E4352008AA04E /* PhotoLike */,
 				83AE55181A1E4352008AA04E /* PhotoLikeTests */,
+				839F17001A1EC658000879CA /* PhotoToday */,
+				839F16FD1A1EC658000879CA /* Frameworks */,
 				83AE54FD1A1E4352008AA04E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +149,7 @@
 			children = (
 				83AE54FC1A1E4352008AA04E /* PhotoLike.app */,
 				83AE55151A1E4352008AA04E /* PhotoLikeTests.xctest */,
+				839F16FC1A1EC658000879CA /* PhotoToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +203,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		839F16FB1A1EC658000879CA /* PhotoToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839F170B1A1EC658000879CA /* Build configuration list for PBXNativeTarget "PhotoToday" */;
+			buildPhases = (
+				839F16F81A1EC658000879CA /* Sources */,
+				839F16F91A1EC658000879CA /* Frameworks */,
+				839F16FA1A1EC658000879CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoToday;
+			productName = PhotoToday;
+			productReference = 839F16FC1A1EC658000879CA /* PhotoToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		83AE54FB1A1E4352008AA04E /* PhotoLike */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83AE551F1A1E4352008AA04E /* Build configuration list for PBXNativeTarget "PhotoLike" */;
@@ -141,10 +227,12 @@
 				83AE54F81A1E4352008AA04E /* Sources */,
 				83AE54F91A1E4352008AA04E /* Frameworks */,
 				83AE54FA1A1E4352008AA04E /* Resources */,
+				839F170E1A1EC658000879CA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				839F17091A1EC658000879CA /* PBXTargetDependency */,
 			);
 			name = PhotoLike;
 			productName = PhotoLike;
@@ -178,6 +266,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = chris;
 				TargetAttributes = {
+					839F16FB1A1EC658000879CA = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					83AE54FB1A1E4352008AA04E = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -202,11 +293,20 @@
 			targets = (
 				83AE54FB1A1E4352008AA04E /* PhotoLike */,
 				83AE55141A1E4352008AA04E /* PhotoLikeTests */,
+				839F16FB1A1EC658000879CA /* PhotoToday */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		839F16FA1A1EC658000879CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839F17071A1EC658000879CA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83AE54FA1A1E4352008AA04E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +327,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		839F16F81A1EC658000879CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839F17051A1EC658000879CA /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83AE54F81A1E4352008AA04E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +358,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		839F17091A1EC658000879CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 839F16FB1A1EC658000879CA /* PhotoToday */;
+			targetProxy = 839F17081A1EC658000879CA /* PBXContainerItemProxy */;
+		};
 		83AE55171A1E4352008AA04E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 83AE54FB1A1E4352008AA04E /* PhotoLike */;
@@ -277,6 +390,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		839F170C1A1EC658000879CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhotoToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		839F170D1A1EC658000879CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PhotoToday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		83AE551D1A1E4352008AA04E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -410,6 +549,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		839F170B1A1EC658000879CA /* Build configuration list for PBXNativeTarget "PhotoToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839F170C1A1EC658000879CA /* Debug */,
+				839F170D1A1EC658000879CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		83AE54F71A1E4352008AA04E /* Build configuration list for PBXProject "PhotoLike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
